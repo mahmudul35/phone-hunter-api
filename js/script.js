@@ -1,9 +1,10 @@
-const handleSearch = () => {
-  document.getElementById("search").classList.add("hidden");
+const loadAllPhones = () => {
+  document.getElementById("spinner").classList.add("hidden");
+  console.log("3 seconf is gone");
 };
 
-const loadAllData = () => {
-  setTimeout(() => {
-    handleSearch();
-  }, 3000);
+const handleSearch = () => {
+  document.getElementById("spinner").classList.remove("hidden");
+  document.getElementById("spinner").classList.add("block");
+  setTimeout(loadAllPhones, 3000);
 };
